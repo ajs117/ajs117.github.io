@@ -113,6 +113,7 @@ video#bgvid {
 
 .info-box {
     width: 90%;
+    text-align: center;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
@@ -188,6 +189,15 @@ a.navicon img {
 
 .bottom-angle-blue {
     border-top: 50px solid rgba(24, 64, 90, 1.0);
+    z-index: 2;
+}
+
+.top-angle-black {
+    border-bottom: 50px solid rgba(0, 0, 0, 1.0);
+}
+
+.bottom-angle-black {
+    border-bottom: 50px solid rgba(0, 0, 0, 1.0);
     z-index: 2;
 }
 
