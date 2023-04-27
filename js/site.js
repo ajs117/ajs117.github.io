@@ -1,15 +1,11 @@
 ﻿$(function () {
-    var vid = document.getElementById("bgvid");
+    const vid = $("#bgvid")[0];
     vid.playbackRate = 0.5;
 
-    $("#toplogo").hide();
+    const $topLogo = $("#toplogo");
+    $topLogo.hide();
 
-    smoothScroll.init({
-        selector: 'a[href^="#"]',
-        selectorHeader: ".navbar-fixed-top"
-    });
-
-    $(document).ready(function () {
+    function initCarousel() {
         $(".slick-carousel").slick({
             slidesToShow: 5,
             slidesToScroll: 1,
@@ -34,87 +30,74 @@
                 }
             ]
         });
-    });
+    }
 
-    // tooltip
-    $("[data-toggle=tooltip]").tooltip({
-        placement: "bottom"
-    });
+    function initTooltip() {
+        $("[data-toggle=tooltip]").tooltip({
+            placement: "bottom"
+        });
+    }
 
-    function indexResize() {
-        // resize above the fold
-        var homecentralcontainer = $("#homecentralicon").parent();
-        var leadServicesMarginTop =
-            $(window).height() -
-            (homecentralcontainer.offset().top + homecentralcontainer.height() + 20);
-        if (leadServicesMarginTop > 600) {
-            leadServicesMarginTop = 600;
-        }
+    function resizeFooterDivider() {
+        const width = $(window).width() / 2.0;
+        $("#footerdivider").css({
+            borderRightWidth: width,
+            borderLeftWidth: width,
+            borderStyle: "solid",
+            borderColor: "transparent"
+        });
+    }
+
+    function resizeIndex() {
+        const windowHeight = $(window).height();
+        const $container = $("#homecentralicon").parent();
+        const margin = windowHeight - ($container.offset().top + $container.height() + 20);
+        const leadServicesMarginTop = Math.min(margin, 600);
+
         $("#leadservicestopdivider").css("marginTop", leadServicesMarginTop);
 
-        // resize lead services triangles
-        $(".top-angle").css({
+        $(".top-angle, .bottom-angle").css({
             borderRightWidth: $(window).width() / 2.0,
             borderLeftWidth: $(window).width() / 2.0,
-            borderLeftStyle: "solid",
-            borderRightStyle: "solid",
-            borderLeftColor: "transparent",
-            borderRightColor: "transparent"
+            borderStyle: "solid",
+            borderColor: "transparent"
         });
 
-        $(".bottom-angle").css({
-            borderRightWidth: $(window).width() / 2.0,
-            borderLeftWidth: $(window).width() / 2.0,
-            borderLeftStyle: "solid",
-            borderRightStyle: "solid",
-            borderLeftColor: "transparent",
-            borderRightColor: "transparent"
-        });
-
-        $("#footerdivider").css({
-            borderRightWidth: $(window).width() / 2.0,
-            borderLeftWidth: $(window).width() / 2.0,
-            borderLeftStyle: "solid",
-            borderRightStyle: "solid",
-            borderLeftColor: "transparent",
-            borderRightColor: "transparent"
-        });
+        resizeFooterDivider();
     }
 
     function resize() {
-        $("#footerdivider").css({
-            borderRightWidth: $(window).width() / 2.0,
-            borderLeftWidth: $(window).width() / 2.0,
-            borderLeftStyle: "solid",
-            borderRightStyle: "solid",
-            borderLeftColor: "transparent",
-            borderRightColor: "transparent"
-        });
+        resizeFooterDivider();
+    }
+
+    function handleScroll() {
+        const $topNav = $("#topnav");
+        const scrollTop = $(window).scrollTop();
+
+        if (scrollTop) {
+            $topNav.addClass("scrolled");
+            $topLogo.show();
+        } else {
+            $topNav.removeClass("scrolled");
+            $topLogo.hide();
+        }
     }
 
     if ($("body").is("#index")) {
-        $(indexResize); // resize on load
-        $(window).resize(indexResize); // resize on resize
-
-        // on scroll make nav less transparent
-        $(window).scroll(function () {
-            if ($(window).scrollTop()) {
-                $("#topnav").addClass("scrolled");
-                $("#toplogo").show();
-            } else {
-                $("#topnav").removeClass("scrolled");
-                $("#toplogo").hide();
-            }
-        });
+        initCarousel();
+        initTooltip();
+        resizeIndex();
+        $(window).on("resize", resizeIndex);
+        $(window).on("scroll", handleScroll);
     } else {
-        $(resize); // resize on load
-        $(window).resize(resize); // resize on resize
+        initTooltip();
+        resize();
+        $(window).on("resize", resize);
     }
 
     (function () {
-        "use strict";
-        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
-            var msViewportStyle = document.createElement("style");
+        if (navigator.userAgent.match(/IEMobile/10.0 /)) {
+            const msViewportStyle = document.createElement("style");
             msViewportStyle.appendChild(
                 document.createTextNode("@-ms-viewport{width:auto!important}")
             );
