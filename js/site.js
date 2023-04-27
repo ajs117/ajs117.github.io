@@ -44,13 +44,13 @@
     function indexResize() {
         // resize above the fold
         var homecentralcontainer = $("#homecentralicon").parent();
-        var leadServicesMarginTop =
+        var softdevMarginTop =
             $(window).height() -
             (homecentralcontainer.offset().top + homecentralcontainer.height() + 20);
-        if (leadServicesMarginTop > 600) {
-            leadServicesMarginTop = 600;
+        if (softdevMarginTop > 600) {
+            softdevMarginTop = 600;
         }
-        $("#leadservicestopdivider").css("marginTop", leadServicesMarginTop);
+        $("#softdevtopdivider").css("marginTop", softdevMarginTop);
 
         // resize lead services triangles
         $(".top-angle").css({
