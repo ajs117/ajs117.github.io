@@ -11,9 +11,9 @@ body {
     padding-top: 52px;
 }
 
-    body > div:nth-child(2) {
-        padding-top: 30px;
-    }
+body>div:nth-child(2) {
+    padding-top: 30px;
+}
 
 a:focus {
     outline: none;
@@ -23,10 +23,10 @@ dd {
     margin-bottom: 7px;
 }
 
-    dd ul {
-        margin-left: 20px;
-        padding-left: 0;
-    }
+dd ul {
+    margin-left: 20px;
+    padding-left: 0;
+}
 
 #index {
     padding-top: 120px;
@@ -79,26 +79,26 @@ video#bgvid {
     margin-top: 0px;
 }
 
-    #topnav .dropdown-menu {
-        background-color: transparent;
-    }
+#topnav .dropdown-menu {
+    background-color: transparent;
+}
 
-    #topnav.scrolled,
-    #topnav.staticheader {
-        background-color: rgba(24, 64, 90, 0.9);
-        border-bottom: 1px solid rgba(255,255,255,1.0);
-        margin-top: 0;
-    }
+#topnav.scrolled,
+#topnav.staticheader {
+    background-color: rgba(24, 64, 90, 0.9);
+    border-bottom: 1px solid rgba(255, 255, 255, 1.0);
+    margin-top: 0;
+}
 
-        #topnav.scrolled .dropdown-menu,
-        #topnav.staticheader .dropdown-menu {
-            background-color: rgba(24, 64, 90, 0.9);
-        }
+#topnav.scrolled .dropdown-menu,
+#topnav.staticheader .dropdown-menu {
+    background-color: rgba(24, 64, 90, 0.9);
+}
 
-        #topnav.staticheader,
-        #topnav.staticheader .dropdown-menu {
-            background-color: rgba(24, 64, 90, 1.0);
-        }
+#topnav.staticheader,
+#topnav.staticheader .dropdown-menu {
+    background-color: rgba(24, 64, 90, 1.0);
+}
 
 #navbar a {
     display: inline-block;
@@ -106,13 +106,13 @@ video#bgvid {
 }
 
 #topnav a {
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
     font-family: Exo;
     font-size: 18px;
 }
 
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: rgba(255,255,255,1.0);
+    background-color: rgba(255, 255, 255, 1.0);
 }
 
 @media (min-width: 768px) {
@@ -126,28 +126,28 @@ a.navicon {
     padding-right: 5px !important;
 }
 
-    a.navicon img {
-        height: 20px;
-    }
+a.navicon img {
+    height: 20px;
+}
 
 #homecentralicon {
     text-align: center;
     margin-top: 60px;
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
 }
 
-    #homecentralicon img {
-        height: 170px;
-    }
+#homecentralicon img {
+    height: 170px;
+}
 
-    #homecentralicon h2 {
-        font-size: 72px;
-    }
+#homecentralicon h2 {
+    font-size: 72px;
+}
 
-    #homecentralicon h3 {
-        font-size: 50px;
-        margin-bottom: 50px;
-    }
+#homecentralicon h3 {
+    font-size: 50px;
+    margin-bottom: 50px;
+}
 
 @media (max-width: 768px) {
     #homecentralicon h3 {
@@ -161,20 +161,20 @@ a.navicon {
 }
 
 .top-angle-white {
-    border-bottom: 50px solid rgba(255,255,255,1.0);
+    border-bottom: 50px solid rgba(255, 255, 255, 1.0);
 }
 
 .bottom-angle-white {
-    border-top: 50px solid rgba(255,255,255,1.0);
+    border-top: 50px solid rgba(255, 255, 255, 1.0);
     z-index: 2;
 }
 
 .top-angle-grey {
-    border-bottom: 50px solid rgba(59,59,59, 1.0);
+    border-bottom: 50px solid rgba(59, 59, 59, 1.0);
 }
 
 .bottom-angle-grey {
-    border-top: 50px solid rgba(59,59,59, 1.0);
+    border-top: 50px solid rgba(59, 59, 59, 1.0);
     z-index: 2;
 }
 
@@ -187,42 +187,54 @@ a.navicon {
     z-index: 2;
 }
 
-    #leadservices {
-    background-color: rgba(255,255,255,1.0);
+#softdev {
+    background-color: rgba(255, 255, 255, 1.0);
     text-align: center;
     padding-top: 1px;
     padding-bottom: 50px;
 }
 
-    #leadservices h2 {
-        margin-bottom: 30px;
-        position: relative;
-    }
+#softdev h2 {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+#datasci {
+    background-color: rgba(255, 255, 255, 1.0);
+    text-align: center;
+    padding-top: 1px;
+    padding-bottom: 50px;
+}
+
+#datasci h2 {
+    margin-bottom: 30px;
+    position: relative;
+}
 
 #other {
-    background-color: rgba(59,59,59, 1.0);
+    background-color: rgba(59, 59, 59, 1.0);
     text-align: center;
     padding-top: 1px;
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
     padding-bottom: 50px;
 }
 
-    #other h2 {
-        margin-bottom: 30px;
-        position: relative;
-    }
+#other h2 {
+    margin-bottom: 30px;
+    position: relative;
+}
 
 #serviceshoutout {
-    background-color: rgba(255,0,0,1.0);
+    background-color: rgba(255, 0, 0, 1.0);
     min-height: 200px;
 }
 
 #intro {
     z-index: 1;
-    background-color: rgba(59,59,59, 1.0);
+    background-color: rgba(59, 59, 59, 1.0);
     padding-top: 80px;
     padding-bottom: 50px;
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
 }
 
 .wraparound {
@@ -232,14 +244,14 @@ a.navicon {
     padding: 15px 0 0;
 }
 
-    .wraparound:after {
-        content: '';
-        border-left: 15px solid transparent;
-        border-right: 15px solid transparent;
-        border-top: 10px solid rgba(0,0,0,1.0);
-        width: 1200px;
-        position: absolute;
-    }
+.wraparound:after {
+    content: '';
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 10px solid rgba(0, 0, 0, 1.0);
+    width: 1200px;
+    position: absolute;
+}
 
 @media (min-width: 1200px) {
     .wraparound {
@@ -261,7 +273,7 @@ a.navicon {
 
 .contact {
     background-color: rgba(24, 64, 90, 1.0);
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
 }
 
 .relative {
@@ -270,11 +282,11 @@ a.navicon {
 
 .nav-logo {
     height: 20px;
-    color: rgba(255,255,255,1.0) !important;
+    color: rgba(255, 255, 255, 1.0) !important;
 }
 
 .main {
-    background-color: rgba(255,255,255,1.0);
+    background-color: rgba(255, 255, 255, 1.0);
     min-height: 300px;
     position: relative;
 }
@@ -285,6 +297,6 @@ a.navicon {
 
 .footer {
     padding-top: 15px;
-    color: rgba(255,255,255,1.0);
+    color: rgba(255, 255, 255, 1.0);
     font-size: xx-small;
 }
