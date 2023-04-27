@@ -23,9 +23,8 @@ dd {
     margin-bottom: 7px;
 }
 
-dd ul {
-    margin-left: 20px;
-    padding-left: 0;
+ul {
+    padding: 0;
 }
 
 #index {
@@ -69,6 +68,8 @@ video#bgvid {
     padding: 0;
 }
 
+
+
 #topnav {
     background-color: rgba(255, 255, 255, 0.0);
     -webkit-transition: background .5s ease-out, margin .5s ease-out;
@@ -81,6 +82,12 @@ video#bgvid {
 
 #topnav .dropdown-menu {
     background-color: transparent;
+}
+
+@media (min-width: 768px){
+    .navbar-collapse {
+
+    }
 }
 
 #topnav.scrolled,
@@ -189,15 +196,6 @@ a.navicon img {
 
 .bottom-angle-blue {
     border-top: 50px solid rgba(24, 64, 90, 1.0);
-    z-index: 2;
-}
-
-.top-angle-black {
-    border-bottom: 50px solid rgba(0, 0, 0, 1.0);
-}
-
-.bottom-angle-black {
-    border-bottom: 50px solid rgba(0, 0, 0, 1.0);
     z-index: 2;
 }
 
