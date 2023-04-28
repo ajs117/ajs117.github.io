@@ -4,9 +4,9 @@
 
     $("#toplogo").hide();
 
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 500,
-        speedAsDuration: true
+    smoothScroll.init({
+        selector: 'a[href^="#"]',
+        selectorHeader: ".navbar-fixed-top"
     });
 
     $(document).ready(function () {
