@@ -1,0 +1,1 @@
+import{f as e}from"./index-BtTzevLH.js";var t=e();function n(e=1e3){let[n,r]=(0,t.useState)(()=>Date.now());return(0,t.useEffect)(()=>{let t=window.setInterval(()=>r(Date.now()),e);return()=>window.clearInterval(t)},[e]),n}export{n as t};

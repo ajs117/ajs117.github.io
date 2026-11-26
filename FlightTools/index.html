@@ -1,13 +1,26 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Where am I? Offline in-flight position tracker and other flight tools." />
+    <link rel="icon" href="/FlightTools/favicon.ico" />
+    <link rel="apple-touch-icon" href="/FlightTools/logo192.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <title>Flight Tools</title>
-    <script type="module" crossorigin src="/FlightTools/assets/index-BlQ5aLgl.js"></script>
-    <link rel="stylesheet" crossorigin href="/FlightTools/assets/index-C4b-cFGi.css">
-  </head>
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('flighttools:theme');
+        if (t === 'dark' || (t !== 'light' && matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark');
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="/FlightTools/assets/index-BtTzevLH.js"></script>
+    <link rel="stylesheet" crossorigin href="/FlightTools/assets/index-Ca80dRaW.css">
+  <link rel="manifest" href="/FlightTools/manifest.webmanifest"></head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
